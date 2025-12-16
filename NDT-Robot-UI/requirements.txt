@@ -1,0 +1,15 @@
+asyncio==4.0.0
+cobs==1.2.2
+colorama==0.4.6
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+numpy==2.2.6
+pillow==12.0.0
+PyOpenGL==3.1.10
+PyQt6==6.10.1
+PyQt6-Qt6==6.10.1
+PyQt6_sip==13.10.3
+pyqtgraph==0.14.0
+pyserial==3.5
+qt-material==2.17
+websockets==15.0.1

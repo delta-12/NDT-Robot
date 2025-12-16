@@ -1,0 +1,9 @@
+[submodule "CAVeware"]
+	path = CAVeware
+	url = git@github.com:CAVeRobotics/CAVeware.git
+[submodule "CAVeBox"]
+	path = CAVeBox
+	url = git@github.com:CAVeRobotics/CAVeBox.git
+[submodule "CAVeTalk"]
+	path = CAVeTalk
+	url = git@github.com:CAVEMaN-SeniorDesign/CAVeTalk.git
