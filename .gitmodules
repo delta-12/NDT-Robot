@@ -7,3 +7,6 @@
 [submodule "CAVeTalk"]
 	path = CAVeTalk
 	url = git@github.com:CAVEMaN-SeniorDesign/CAVeTalk.git
+[submodule "HNSW-NDT-Sensor"]
+	path = HNSW-NDT-Sensor
+	url = git@github.com:delta-12/HNSW-NDT-Sensor.git
