@@ -84,7 +84,7 @@ Prerequisites
 
 #### BSP
 
-TODO insert image
+![CAVeware Software Stack](assets/software_stack.png)_CAVeware Software Stack_
 
 The BSP, or Board Support Package, provides a reusable interface across multiple boards that run CAVeware.  Currently, it wraps the STM32 HAL but it could easily be extended to support potential future non-STM32 boards.  The BSP supports several peripherals including ADCs, quadrature encoders, GPIO, brushed DC motors, servos, general PWM, SPI, timers, and UART.  It also provides a time source and logging utilities.  Peripherals can be selectively enabled at compile time depending on what a given board supports.
 
@@ -106,9 +106,11 @@ For each wheel, the differential drive controller applies PID control to the whe
 
 #### Motion Profiler
 
+![Trapezoidal Speed Profile](assets/trapezoidal_speed_profile.png)_Trapezoidal Speed Profile_
+
 When the robot is sent the command to move to a particular position, the motion profiler generates a trapezoidal speed profile to achieve the desired position.  The output of the motion profile is fed to the input of the Rover 4WD differential drive controller.  All together, the control structure looks something like the following, with a simple complementary filter fusing data from the encoders and IMU to estimate position and yaw.
 
-TODO insert diagram
+![Full Motor Control Loop](assets/motor_control.png)_Full Motor Control Loop_
 
 #### Logging
 
