@@ -201,7 +201,7 @@ Similar to the CAVeBoard-Mini, CAVeBox provides a Websocket gateway for wireless
 
 ## Operation
 
-TODO insert image of the UI with callouts
+![NDT Robot UI](assets/ui_diagram.png)_NDT Robot UI_
 
 Operation of the robot is controlled through the NDT Robot UI, which is a simply UI written in Python with PyQT.  It allows a user to manually raise and lower the sensor and manually trigger a sensor sample.  It also allows a user to define a grid for the robot to traverse, with the robot collecting a sensor sample at each node.  After each sample is collected, it is added to a heatmap of the grid.  The NDT Robot UI communicates with the robot and sensor via the CAVeBox gateway.
 
