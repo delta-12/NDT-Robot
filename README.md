@@ -106,7 +106,19 @@ CAVeTalk is the serial protocol used to communicate with the CAVeBoard-Mini over
 
 The robot uses four-wheel differential drive, or skid steer, configuration.  For a given linear speed and angular speed, the differential drive controller calculates invididual wheel speeds using the following kinematics.
 
-TODO insert kinematics
+![Four-Wheel Differential Model](assets/rover_model.png)_Four-Wheel Differential Model_
+
+$$ \omega_L = \frac{2v_B - w\dot{\theta}}{2r} $$
+
+$$ \omega_R = \frac{2v_B + w\dot{\theta}}{2r} $$
+
+where
+- $\omega_L$ = angular velocity of left wheels
+- $\omega_R$ = angular velocity of right wheels
+- $v_B$  = velocity in body frame, aligned with boxy X axis
+- $\dot{\theta}$ = turn rate
+- $w$ = tread
+- $r$ = wheel radius
 
 For each wheel, the differential drive controller applies PID control to the wheel speed using the wheel speed calculated above as the reference and velocity calculated from the corresponding encoder as the feedback.
 
