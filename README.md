@@ -59,7 +59,13 @@ The robot is controlled by the CAVeBoard-Mini running the CAVeware firmware.  Th
 
 The board can be programmed via Serial Wire Debug (SWD).  Connect the SWD pins on the STM32 development board to the SWD pins on an ST-LINK and flash using OpenOCD or [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html).
 
-TODO insert commands / screenshots for both
+If using STM32CubeProgrammer, select "Erasing & Programming" from the left-side menu, connect to the ST-LINK using SWD, set the path to the `CAVeware.elf` (see the [CAVeware](#caveware) section for downloading or building from source), and then click "Start Programming".  In order for the firmware to start running after programming, the "Run after programming" box must be checked, otherwise a board reset is required.
+
+![STM32CubeProgrammer Options](assets/stm32cubeprogrammer.png)_STM32CubeProgrammer Options_
+
+OpenOCD alone can also be used to program the board, but GDB can be used with OpenOCD as well.  To use GDB with OpenOCD to program the board, start OpenOCD using the command `openocd -f <path to ST-LINK config> -f <path to STM32F4 config>`, e.g. on Linux `openocd -f /usr/share/openocd/scripts/interface/stlink-v2.cfg -f /usr/share/openocd/scripts/target/stm32f4x.cfg`.  Then launch GDB with the path to the `CAVeware.elf` (again see the [CAVeware](#caveware) section for downloading or building from source).  It is important to note that `gdb-multiarch` will most likely be needed.  This command might look like `gdb-multiarch build/CAVeBoard-Mini_Release/CAVeware.elf` if building from source.  OpenOCD should automatically launch a GDB server on `localhost:3333`, so connect to that after launching GDB using the command `target extended-remoted localhost:3333`.  Then program and run with `load` and `r`, respectively.
+
+![OpenOCD + GDB](assets/openocd_gdb.png)_OpenOCD + GDB_
 
 ### CAVeware
 
