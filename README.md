@@ -45,13 +45,13 @@ The robot is powered by two 12V 15Ah LiFePO4 batteries wired in parallel, connec
 
 ### Motor Driver
 
-TODO insert picture with callouts and pinout
+![Motor Driver board](assets/motor_board.png)_Motor Driver board_
 
 The motor driver PCB is responsible for driving the four brushed DC motors.  The board is based on the DRV8874 H-Bridge Motor Driver, which can supply a peak current of 6A to each motor and are configured to operate PWM Control Mode.  Each motor driver has an enable pin (nSleep), fault pin, and current sense pin in addition to two PWM inputs and low-side voltage inputs.  These pins are broken out to both standard male pin headers and JST GH connectors and are 3.3V logic.  12V power is supplied to the motor driver board via a XT60 connector.  For more information, please see the datasheet for the DRV8874 and the "MotorBoard" Altium project.
 
 ### CAVeBoard-Mini
 
-TODO insert picture with callouts and pinout
+![CAVeBoard-Mini](assets/control_board.png)_CAVeBoard-Mini_
 
 The robot is controlled by the CAVeBoard-Mini running the CAVeware firmware.  This PCB has headers for this [STM32F407GZT6 development board](https://a.co/d/8tSHE93) as well as JST GH connectors for four brushed DC motors (low-side 3.3V logic), JST XH connectors for four 3.3V quadrature encoders, JST XH connectors for three UARTs, and standard pin headers for seven miscellanous 5V PWM outputs.  The CAVeBoard-Mini also features an RGBW LED, buzzer, and 6-axis LSM6DSV16X IMU connected via SPI.  The board is powered by a 5V barrel jack.  For more information, consult the "CAVeBoard-Mini" Altium project.  The CAVeBoard-Mini is mounted in the center of the robot on a 3D-printed bracket that straddles the batteries
 
