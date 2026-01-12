@@ -154,7 +154,7 @@ See the [Operation](#operation) section for more information about CAVeBox is us
 
 ## Sensor
 
-TODO insert picture with callouts
+![Sensor](assets/sensor.png)_Sensor_
 
 The non-destructive testing sensor works be generating highly nonlinear solitary waves by using an electromagnetic to lift and drop the top bead in a stack of metal beads.  In the middle of the stack is a piezoelectric sensor that measures the outgoing wave and the return wave.  The output from the piezoelectric sensor goes through an amplifier and an parallel 12-bit ADC is used to the read the ouput voltage from the amplifier, though only the upper eight bits are read.  The ADC is controlled by a clock line and is sampled at around 2 MHz.  To generate a complete waveform from the sensor, the ADC is sampled roughly 3000 times.
 
