@@ -233,7 +233,7 @@ To setup CAVeBox on a Raspberry Pi running Ubuntu Server:
 
 When running CAVeBox, make sure the robot is already powered on (lift the red E-stop button).  Three beeps from the robot should be heard when the robot powers on and successfully initializes all peripherals.  The light on top of the CAVeBoard-Mini should also turn green.  If no beeps are heard and/or the light remains yellow, there was an issue initializing one or more of the peripherals (e.g. the IMU was not detected or did not calibrate successfully).
 
-TODO insert end-to-end diagram
+![End-to-End System Diagram](assets/system.png)_End-to-End System Diagram_
 
 To run the UI, make sure CAVeBox is already running and the IP address of the device it is running on (e.g. the Pi) is known.
 
