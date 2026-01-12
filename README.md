@@ -25,7 +25,7 @@
 
 ## Robot
 
-TODO insert picture with callouts
+![Robot](assets/robot.png)_Robot_
 
 ### Chassis
 
