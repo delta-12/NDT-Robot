@@ -164,7 +164,7 @@ The original sensor design used a Teensy 3.2 Development Board.  However, this b
 
 ### Linear Actuator
 
-TODO insert picture with callouts
+![Linear Actuator](assets/linear_actuator.png)_Linear Actuator_
 
 The sensor unit is mounted on a linear actuator on the front of the robot.  The linear actuator lowers the sensor when collecting samples and raises it while the robot is moving to avoid dragging the bottom of the sensor across the surface being sampled.  The linear actuator consists of a guide rails, dolly, 8 mm lead screw, NEMA 17 stepper motor, and some additional mouting hardware.  The stepper motor is driven by an A4988 stepper motor driver, which is also controlled by the STM32 Teensy replacement.  The A4988 is configured with a microstep resolution of a sixteenth step, and another timer is used to pulse the step pin.  All parts aside from the stepper motor and stepper motor driver can be found on [gobilda.com](https://www.gobilda.com/).
 
